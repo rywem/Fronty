@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Referencing</title>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script>
+    $(document).ready(function() {
+        $("#btnAll").click(function(){
+            $("*").css("background-color", "yellow");
+        });
+        $("#btnTagname").click(function(){
+            $("ol").css("background-color", "green");
+        });
+        $("#btnMultiple").click(function(){
+            $("button, p").css("background-color", "lightblue");
+        });
+        $("#btnID").click(function(){
+            $("#firstPara, #sub2").css("background-color", "lightgreen");
+        })
+        $("#btnClass").click(function(){
+            $(".sub3, .sub5").css("background-color", "brown");
+        });
+        $("#btnThis").click(function(){
+            $(this).css("background-color", "brown");
+        });
+        $("p").hover(function(){
+            $(this).css("background-color", "lightgray");
+        });
+    });
+    </script>
+</head>
+<body>
+<ol class="subject">
+    <li id="sub1">English</li>
+    <li id="sub2">Mathematics</li>
+    <li id="sub3" class="sub3">Physics</li>
+    <li id="sub4">Chemistry</li>
+    <li id="sub5" class="sub5">History</li>
+    <li id="sub6">Geography</li>
+</ol>
+<ul id="department">
+    <li>Sales</li>
+    <li>HR</li>
+    <li>Marketing</li>
+    <li>Accounts</li>
+</ul>
+<p id="firstPara">First paragraph. First paragraph. First paragraph. First paragraph. First paragraph. </p>
+<p id="secondPara">Second paragraph. Second paragraph. Second paragraph. Second paragraph. Second paragraph. </p>
+<button id="btnAll" style="width: 220px;">* (All) Selector Button</button><br />
+<button id="btnTagname" style="width: 220px;">Tagname Button</button><br />
+<button id="btnMultiple" style="width: 220px;">Multiple Selector Button</button><br />
+<button id="btnID" style="width: 220px;">ID Selector Button</button><br />
+<button id="btnClass" style="width: 220px;">Class Selector Button</button><br />
+<button id="btnThis" style="width: 220px;">This Selector Button</button><br />
+</body>
+</html>

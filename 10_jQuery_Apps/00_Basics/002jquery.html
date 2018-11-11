@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Referencing</title>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#myPara").css("background-color", "pink");
+    });
+});
+
+</script>
+</head>
+<body>
+    <p id="myPara">Second jquery</p>
+    <button id="btnClick">Click</button>
+</body>
+</html>

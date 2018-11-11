@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Referencing</title>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script>
+    $(document).ready(function(){
+        $("#btnClass").click(function(){
+            $("[class]").css("color", "red");
+        });
+        $("#btnID").click(function(){
+            $("[id]").css("color", "blue");
+        });
+        $("#btnIDFirstDiv").click(function(){
+            $("[id=firstDiv]").css("color", "lightblue");
+        });
+        $("#btnClassParas").click(function(){
+            $("[class=paras]").css("color", "red");
+        });
+        $("#btnClassNotParas").click(function(){
+            $("p[class!=paras]").css("color", "red");
+        });
+        $("#btnIDStartsWith").click(function(){
+            $("[id^=first]").css("color", "red");
+        });
+        $("#btnIDEndsWith").click(function(){
+            $("[id$=th]").css("color", "red");
+        });
+        $("#btnIDContains").click(function(){
+            $("[id*=par]").css("color", "red");
+        });
+        $("#btnIDWordHyphen").click(function(){
+            $("[id|=first]").css("color", "red");
+        });
+        $("#btnIDWordSpace").click(function(){
+            $("[class~=fourth]").css("color", "red");
+        });
+    });
+    </script>
+</head>
+<body>
+<table>
+    <p id="first-para" class="paras">First paragraph. First paragraph.</p>
+    <p id="second-para">Second paragraph. Second paragraph.</p>
+    <p id="third-para">Third paragraph. Third paragraph.</p>
+    <p id="fourth-para" class="fourth paras">Fourth paragraph. Fourth paragraph.</p>
+    <div id="firstDiv">First div</div>
+    <div id="divSecond" class="divs">Second div</div>
+    <div id="divFourth">Fourth div</div>
+    <div id="divFifth" class="divs">Second div</div>
+    <button id="btnClass">Click selector [class]</button>
+    <button id="btnID">Click by [id]</button><br />
+    <button id="btnIDFirstDiv">Click by id [id=firstDiv]</button>
+    <button id="btnClassParas">Class is [class=paras]</button><br />
+    <button id="btnClassNotParas">NOT p[class!=paras]</button>
+    <button id="btnIDStartsWith">Starts With [id^=first]</button><br />
+    <button id="btnIDEndsWith">Ends With [id$=th]</button>
+    <button id="btnIDContains">Contains [id*=par]</button><br />
+    <button id="btnIDWordHyphen">First Hyphen [id|=first]</button>
+    <button id="btnIDWordSpace">Fourth Space [class~=fourth]</button>
+</table>
+</body>
+</html>
