@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Referencing</title>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#btnClick").click(function(){
+                $("#myPara").css("background-color", "green");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p id="myPara">First jQuery</p>
+<button id="btnClick">Click me!!</button>
+</body>
+
+</html>
