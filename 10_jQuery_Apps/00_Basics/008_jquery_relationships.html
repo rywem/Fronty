@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors</title>
+    <style>
+        .style{
+            border:2px solid black;
+            width:35%;
+            height:100px;
+            padding:10px;
+            margin:10px;
+        }
+        p{
+            border:1px solid red;
+            background-color:pink;
+            width:80px;
+            height:80px;
+            float:left;
+            padding:5px;
+            margin:5px;
+        }
+        span{
+            border:1px solid blue;
+            background-color:lightblue;
+            width:40px;
+            height:40px;
+            float:left;
+            padding:5px;
+            margin:5px;
+        }
+        #first{
+            border:1px solid gray;
+            background-color:silver;
+            width:60px;
+            height:60px;
+            float:left;
+            padding:5px;
+            margin:5px;
+        }
+    </style>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnHideFirstChild").click(function(){
+               $("span:first-child").hide(2000);
+            });
+            $("#btnHideLastChild").click(function(){
+               $("span:last-child").hide(2000);
+            });
+            $("#btnNthChild").click(function(){
+               $("p:nth-child(3)").hide(2000);
+            });
+            $("#btnNthLastChild").click(function(){
+               $("div:nth-last-child(3)").hide(2000);
+            });
+            $("#btnFirstOfType").click(function(){
+               $("p:first-of-type").hide(2000);
+            });
+            $("#btnLastOfType").click(function(){
+               $("p:last-of-type").hide(2000);
+            });
+            $("#btnNthOfType").click(function(){
+               $("p:nth-of-type(2)").hide(2000);
+            });
+            $("#btnOnlyChild").click(function(){
+               $("span:only-child").hide(2000);
+            });
+            $("#btnOnlyOfType").click(function(){
+               $("p:only-of-type").hide(2000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="main" class="style">
+        <p>Paragraph</p>
+        <span>Span</span>
+        <p>Paragraph</p>
+    </div>
+   <div id="sub" class="style">
+        <span>Span</span>
+        <div id="first">Div</div>
+        <p>Paragraph</p>
+        <div>
+          <span>Span</span>
+        </div>
+        <!--
+            <span>Span</span>
+        -->
+   </div>
+    <br />
+    <button id="btnHideFirstChild">Hide First Child (span)</button>
+    <button id="btnHideLastChild">Hide Last Child (span)</button>
+    <button id="btnNthChild">Nth Child (third p)</button><br />
+    <button id="btnNthLastChild">Nth Last Child (3 div)</button>
+    <button id="btnFirstOfType">First of type (p)</button> <!-- Selects first of a specific type -->
+    <button id="btnLastOfType">Last of type (p)</button><br />
+    <button id="btnNthOfType">Nth of type (second p)</button>
+    <button id="btnOnlyChild">Only Child (span)</button>
+    <button id="btnOnlyOfType">Only Of Type (p)</button>
+</body>
+</html>
