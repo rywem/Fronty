@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors</title>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            $("#btnInputs").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("#result").text($(':input').length);
+            });
+            $("#btnPassword").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("#result").text($(':password').length);
+            });
+            $("#btnImage").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("#result").text($(':image').length);
+            });
+            $("#btnRadio").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("#result").text($(':radio').length);
+            });
+            $("#btnCheckbox").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("#result").text($(':checkbox').length);
+            });
+            $("#btnFile").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("#result").text($(':file').length);
+            });
+            $("#btnButton").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("#result").text($(':button').length);
+            });
+            $("#btnReset").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("#result").text($(':reset').length);
+            });
+            $("#btnText").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("#result").text($(':text').length);
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="name">Name:</label>
+    <input type="text" id="user" /><br />
+    <label for="uName">User Name:</label>
+    <input type="text" id="uName" hidden/><br />
+    <label for="pwd"></label>
+    <input type="password" id="pwd" /><br />
+    <label for="gender">Gender:</label>
+    <input type="radio" name="sex" value="m" checked>Male
+    <input type="radio" name="sex" value="f">Female<br />
+    <label for="appliances">Home appliances you own:</label><br />
+    <select name="appliances" multiple="multiple">
+        <option selected>Refrigerator</option>
+        <option>Washing Machine</option>
+        <option>Microwave Oven</option>
+    </select><br />
+    <label for="flower">Which flower you like?</label>
+    <input type="checkbox" name="flower" value="dahlia">Dahlia
+    <input type="checkbox" name="flower" value="tulips" checked>Tulips<br />
+    <input type="image" src="flower1.jpeg">
+    <input type="image" src="flower2.jpeg"><br />
+    <input type="reset" value="Reset"><br /><br />
+    <button id="btnInputs">Inputs selector</button>
+    <button id="btnPassword">Password selector</button>
+    <button id="btnImage">Image selector</button><br />
+    <button id="btnRadio">Radio selector</button>
+    <button id="btnCheckbox">Checkbox selector</button>
+    <button id="btnFile">File selector</button> <br />
+    <button id="btnReset">Reset selector</button>
+    <button id="btnButton">Button selector</button>
+    <button id="btnText">Text selector</button>
+    <br />
+    <span id="result">null</span>
+</body>
+</html>
