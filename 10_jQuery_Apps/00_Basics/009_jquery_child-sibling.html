@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors</title>
+    <style>
+        .style{
+            border:2px solid black;
+            width:35%;
+            height:100px;
+            padding:10px;
+            margin:10px;
+        }
+        p{
+            border:1px solid red;
+            background-color:pink;
+            width:80px;
+            height:80px;
+            float:left;
+            padding:5px;
+            margin:5px;
+        }
+        span{
+            border:1px solid blue;
+            background-color:lightblue;
+            width:40px;
+            height:40px;
+            float:left;
+            padding:5px;
+            margin:5px;
+        }
+        .first{
+            border:1px solid gray;
+            background-color:silver;
+            width:60px;
+            height:60px;
+            float:left;
+            padding:5px;
+            margin:5px;
+        }
+    </style>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnDirectChild").click(function(){
+                $("div > span").hide(2000);
+            });
+            $("#btnDescendent").click(function(){
+                $("div span").hide(2000);
+            });
+            $("#btnAdjacentSibling").click(function(){
+                $("p + span").hide(2000);
+            });
+            $("#btnGeneralSibling").click(function(){
+                $("p ~ span").hide(2000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="main" class="style">
+        <p>Paragraph</p>
+        <span>Span</span>
+        <div class="first">Div</div>
+        <span>Span</span>
+    </div>
+
+   <div id="sub" class="style">
+        <p>Paragraph</p>
+        <span>Span</span>
+        <div class="first">Div</div>
+        <p>Paragraph<span>Span inside</span></p>
+        <div>
+          <span>Span</span>
+        </div>
+   </div> <br />
+    <button id="btnDirectChild">Direct Child (div > span)</button>
+    <button id="btnDescendent">Descendent (Direct or indirect) (div p)</button>
+    <button id="btnAdjacentSibling">Adjacent Sibling of (p + span)</button>
+    <button id="btnGeneralSibling">General Sibling of (p ~ span)</button>
+</body>
+</html>
