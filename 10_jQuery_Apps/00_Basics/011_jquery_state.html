@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors</title>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            $("#btnHidden").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $(":hidden").show(1000);
+            });
+            $("#btnVisible").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $(":visible").hide(1000);
+            });
+            $("#btnDisabled").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $(":disabled").hide(1000);
+            });
+            $("#btnEnabled").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $(":enabled").hide(1000);
+            });
+            $("#btnChecked").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $(":checked").hide(1000);
+            });
+            $("#btnSelected").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $(":selected").hide(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="name">Name:</label>
+    <input type="text" id="user" hidden /><br />
+    <label for="uName">User Name:</label>
+    <input type="text" id="uName" disabled /><br />
+    <label for="pwd"></label>
+    <input type="password" id="pwd" /><br />
+    <label for="gender">Gender:</label>
+    <input type="radio" name="sex" value="m" checked>Male
+    <input type="radio" name="sex" value="f">Female<br />
+    <label for="appliances">Home appliances you own:</label><br />
+    <select name="appliances" multiple="multiple">
+        <option selected>Refrigerator</option>
+        <option>Washing Machine</option>
+        <option>Microwave Oven</option>
+    </select><br />
+    <label for="flower">Which flower you like?</label>
+    <input type="checkbox" name="flower" value="dahlia">Dahlia
+    <input type="checkbox" name="flower" value="tulips" checked>Tulips<br />
+    <input type="image" src="flower1.jpeg">
+    <input type="image" src="flower2.jpeg"><br />
+    <input type="reset" value="Reset"><br /><br />
+    <button id="btnHidden">Hidden selector</button>
+    <button id="btnVisible">Visible selector</button>
+    <button id="btnDisabled">Disabled selector</button>
+    <button id="btnEnabled">Enabled selector</button>
+    <button id="btnChecked">Checked selector</button>
+    <button id="btnSelected">Selected selector</button>
+    <br />
+</body>
+</html>

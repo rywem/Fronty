@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+           function animating()
+           {
+               $("#box").slideToggle(5000);
+           }
+           animating();
+
+            $("#btnAnimated").click(function(){
+                //alert("There are " + $(':input').length + " inputs in this webpage.");
+                $("div:animated").css("background-color", "purple");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div></div>
+    <div id="box"></div>
+    <div></div>
+    <button id="btnAnimated">Animated selector</button>
+    <br />
+</body>
+</html>
