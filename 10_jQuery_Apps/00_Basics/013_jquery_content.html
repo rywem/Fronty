@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors</title>
+    <style>
+        .style{
+            border:2px solid black;
+            width:35%;
+            height:100px;
+            padding:10px;
+            margin:10px;
+        }
+        p{
+            border:1px solid red;
+            background-color:pink;
+            width:80px;
+            height:80px;
+            float:left;
+            padding:5px;
+            margin:5px;
+        }
+        span{
+            border:1px solid blue;
+            background-color:lightblue;
+            width:40px;
+            height:40px;
+            float:left;
+            padding:5px;
+            margin:5px;
+        }
+        .first{
+            border:1px solid gray;
+            background-color:silver;
+            width:60px;
+            height:60px;
+            float:left;
+            padding:5px;
+            margin:5px;
+        }
+    </style>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnContains").click(function(){
+                $("p:contains(First)").css("background-color", "red");
+            });
+            $("#btnHas").click(function(){
+                $("p:has(span)").css("background-color", "red");
+            });
+            $("#btnEmpty").click(function(){
+                $(":empty").css("background-color", "red");
+            });
+            $("#btnParent").click(function(){
+                $(":parent").css("background-color", "red");
+            });
+            $("#btnNot").click(function(){
+                $(":not(:parent)").css("background-color", "red");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="main" class="style">
+        <p>First Paragraph</p>
+        <span>First Span</span>
+        <div class="first"></div>
+        <span>Second Span</span>
+    </div>
+
+   <div id="sub" class="style">
+        <p>First Paragraph</p>
+        <span>First Span</span>
+        <div class="first">First Div</div>
+        <p>Second Paragraph<span>Span inside</span></p>
+        <div>
+          <span>Span Inside</span>
+        </div>
+   </div> <br />
+    <button id="btnContains">Contains First</button>
+    <button id="btnHas">p has span</button>
+    <button id="btnEmpty">Empty</button>
+    <button id="btnParent">Parent First</button>
+    <button id="btnNot">Not Parent First</button>
+</body>
+</html>
