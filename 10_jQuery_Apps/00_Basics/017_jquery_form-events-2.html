@@ -17,8 +17,8 @@
             $(":text").select(function(){ //select aka highlight
                 $("#result").text($(this).val()).show().fadeOut(3000);
             });
-            $("form").submit(function(){ //select aka highlight
-                alert($("#salutation").val());
+            $("form").submit(function(){ 
+                alert($("#salutation").val() + ". " + $("[name=FirstName]").val()+ ". " + $("[name=LastName]").val());
             });
         });
     </script>
