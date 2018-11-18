@@ -15,8 +15,10 @@
     <script>
         $(document).ready(function(){
             $("button").click(function(){
-                $(div).hide(5000);
-                alert("complete");
+                $("div").hide(5000, function(){
+                    alert("complete");
+                });
+
             });
         })
     </script>
