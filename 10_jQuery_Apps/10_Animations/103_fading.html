@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Referencing</title>
+    <style>
+        div
+        {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnFadeIn").click(function(){
+                $("div").fadeIn(5000);
+            });
+            $("#btnFadeOut").click(function(){
+                $("div").fadeOut(5000);
+            });
+            $("#btnFadeToggle").click(function(){
+                $("div").fadeToggle(3000);
+            });
+            $("#btnFadeTo").click(function(){
+                $("div:first").fadeTo(3000, ".5");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="background-color:purple;"></div>
+    <div hidden style="background-color:green;"></div><br />
+    <button id="btnFadeIn">Fade In</button>
+    <button id="btnFadeOut">Fade Out</button>
+    <button id="btnFadeToggle">Fade Toggle</button>
+    <button id="btnFadeTo">Fade To</button>
+</body>
+</html>
