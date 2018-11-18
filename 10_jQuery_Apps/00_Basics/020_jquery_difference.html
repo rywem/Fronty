@@ -10,12 +10,12 @@
     <script src="../scripts/jquery-3.3.1.js" ></script>
     <script>
         $(document).ready(function(){
-            $("li").click(function(){
+            $("ul").on("click", "li", function(){
                 alert($(this).text());
             });
             $("#btnAdd").click(function(){
-                var nextNum = $("li:last").text();
-                alert(nextNum);
+                var nextNum = ($("li:last").text()*1) + 1;
+                $("ul").append("<li>" + nextNum + "</li>");
             });
         });
     </script>
