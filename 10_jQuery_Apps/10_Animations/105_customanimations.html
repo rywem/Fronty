@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Referencing</title>
+    <style>
+        div
+        {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnStart").click(function(){
+                $("div").animate({"height":"+=50px", "width":"-=30px"},  5000);
+                $("p").animate({"wordSpacing":"10px", "letterSpacing":"25px"}, 5000);
+            });
+            $("btnStop").click(function(){
+                $("div").stop();
+            });
+            $("#btnDelay").click(function(){
+                $("div:first").animate({"height":"+=50px", "width":"-=30px"},  5000);
+                $("div:last").delay(2000).animate({"height":"+=50px", "width":"-=30px"},  5000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Paragraph Paragraph Paragraph Paragraph</p>
+    <div style="background-color:purple;"></div>
+    <div style="background-color:green;"></div><br />
+    <button id="btnStart">Start</button>
+    <button id="btnStop">Stop</button>
+    <button id="btnDelay">Delay</button>
+</body>
+</html>
