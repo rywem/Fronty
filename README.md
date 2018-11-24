@@ -4,6 +4,8 @@ Front End web development repository
 ## Contents
 1. [myhomepage.com](./myhomepage.com) - a basic homepage with simple html and css content.
 2. [10_jQuery_Apps](https://www.udemy.com/jquery-web-development-made-easy/learn/v4/t) - Learning jQuery by doing 10 jQuery projects.
+3. [Responsive](./Responsive) - build a responsive Websites
+4. [HTML_CSS](./HTML_CSS) - building a responsive website. fundamentals. [UDemy Course](https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2533744?start=0)
 ## Typography
 1. Serif - Extra strokes and curves at the end of letters (bits)
 2. Sans Serif - Without extra strokes, curves at end of letters (no bits)
