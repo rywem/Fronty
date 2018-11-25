@@ -1,0 +1,17 @@
+body {
+    font-family: Helvetica Neue, Arial; 
+    font-size: 18px;
+}
+h1, h2 {
+    color: #006400;
+}
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 25px;
+}
+p {
+    text-align: justify;
+}
