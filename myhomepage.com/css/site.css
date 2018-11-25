@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -41,4 +47,24 @@
         display: block;
         text-align: left;
     }
+}
+
+.content {
+    width: 75%;
+    float: left;    
+    background-color: aqua;
+}
+
+.menu {
+    width: 25%;
+    float: left;
+    background-color: red;
+}
+
+footer {
+    background-color: yellow;
+}
+
+.footer {
+    background-color: yellow;
 }
