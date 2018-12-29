@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8"/>
     <script>
         function greeting (parameterVariable) {
             console.log('Hello, world');
@@ -19,8 +21,44 @@
 
         }
 
-        greeting('Welcome to 10 Days of JavaScript!');
-        performOperation(12, 4.32, 'is the best place to learn and practice coding!');
+        function vowelsAndConsonants(s) {
+            var i;
+            for (i = 0; i < s.length; i++) {
+                if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
+                    console.log(s[i]);
+                }
+            }
+            for (i = 0; i < s.length; i++) {
+                if (s[i] != 'a' && s[i] != 'e' && s[i] != 'i' && s[i] != 'o' && s[i] != 'u') {
+                    console.log(s[i]);
+                }
+            }
+        }
+        function regexVar() {
+            /*
+             * Declare a RegExp object variable named 're'
+             * It must match a string that starts and ends with the same vowel (i.e., {a, e, i, o, u})
+             */
+             str1 = 'abca';
+             str2 = 'abc';
+             str3 = 'bca';
+             str4 = 'bcc';
+            //const re = new RegExp('(^[aeiou])');
+            const re = new RegExp('/^(aeiou).*\\1$/');
+
+            /*
+             * Do not remove the return statement
+             */
+             console.log(re.test(str1));
+             console.log(re.test(str2));
+             console.log(re.test(str3));
+             console.log(re.test(str4));
+            return re;
+        }
+        regexVar();
+         //vowelsAndConsonants('javascriptloops');
+        //greeting('Welcome to 10 Days of JavaScript!');
+        //performOperation(12, 4.32, 'is the best place to learn and practice coding!');
     </script>
 </head>
 <body>
