@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Referencing</title>
+    <script src="../scripts/jquery-3.3.1.js" ></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btnHtml").click(function() {
+                alert($("p").html());
+            });
+            $("#btnClick").click(function() {
+                alert($("p").html());
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Personal Details</h3>
+    <label for="fname"><b>First name:</b></label><input type="text" id="fname" /><br />
+    <label for="lname"><b>Last name:</b></label><input type="text" id="lname" /><br />
+    <p>My Paragraph!!!</p>
+    <div id="result">The result!!!</div>
+    <input type="button" id="btnHtml" value="Click" /><br />
+    <input type="button" id="btnClick" value="Click" /><br />
+</body>
+</html>
