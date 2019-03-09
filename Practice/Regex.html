@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script>
+        'use strict';
+        function regexVar() {
+            /*
+             * Declare a RegExp object variable named 're'
+             * It must match a string that starts and ends with the same vowel (i.e., {a, e, i, o, u})
+             */
+             var str1 = 'abcda';
+             var str2 = 'abc';
+             var str3 = 'bca';
+             var str4 = 'bcc';
+             const re = new RegExp('/^([aeiou]).+\\1$/');
+             console.log(re.test(str1));
+             console.log(re.test(str2));
+             console.log(re.test(str3));
+             console.log(re.test(str4));
+            return re;
+        }
+
+        regexVar();
+    </script>
+</head>
+<body>
+</body>
+</html>

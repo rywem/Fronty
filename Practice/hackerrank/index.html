@@ -70,6 +70,23 @@
                 console.log(s);
             }
         }
+        function regexVar2() {
+            /*
+             * Declare a RegExp object variable named 're'
+             * It must match a string that starts and ends with the same vowel (i.e., {a, e, i, o, u})
+             */
+             var str1 = 'Mr.X';
+             var str2 = 'Mrs.Y';
+             var str3 = 'Dr#Joseph';
+             var str4 = 'Er .Abc';
+             const re = new RegExp('/^Mr\.|Mrs\.|Ms\.|Dr\.|Er\./');
+             console.log(re.test(str1));
+             console.log(re.test(str2));
+             console.log(re.test(str3));
+             console.log(re.test(str4));
+            return re;
+        }
+        regexVar2();
         //reverseString("1234");
         //regexVar();
          //vowelsAndConsonants('javascriptloops');
