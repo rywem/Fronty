@@ -6,12 +6,10 @@
 
     <script>
         $(document).ready(function(){
-            $("#btnGetValue").click(function() {
-                alert($("label:first").html()); //returns <b>First name:</b>
+            $("#btnClick").click(function() {
+                console.log($("p").text());
             });
-            $("#btnSetValue").click(function() {
-                $("label:first").html("<b>Changed Name:</b>");
-            });
+
         });
     </script>
 </head>
@@ -21,7 +19,7 @@
     <label for="lname"><b>Last name:</b></label><input type="text" id="lname" /><br />
     <p>My Paragraph!!!</p>
     <div id="result">The result!!!</div>
-    <input type="button" id="btnGetValue" value="Get value" /><br />
-    <input type="button" id="btnSetValue" value="Set Value" /><br />
+    <input type="button" id="btnClick" value="Click" /><br />
+
 </body>
 </html>
