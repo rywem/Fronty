@@ -28,10 +28,34 @@ namespace AjaxSolution.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult GetCountries(string continent)
+        {
+            string result = string.Empty;
+
+            List<string> countries = Countries.GetCountries(continent);
+
+            foreach (var item in countries)
+            {
+                result += $" <option value='{item}'>{item}</option>";
+            }
+
+            return Content(result);
+            //return Json(new { data = "0" });
+        }
+
+        /*          
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Json(new { data = _unitOfWork.Category.GetAll(includeProperties: "SiteImage") });
+        }
+        */
         public IActionResult Privacy()
         {
             return View();
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
