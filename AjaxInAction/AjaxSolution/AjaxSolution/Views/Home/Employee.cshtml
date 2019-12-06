@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Employee";
+}
+
+<h1>Employee</h1>
+<style>
+    .simple {
+        border: 1px solid black;          
+    }    
+</style>
+<table id="tbl">
+    <thead>
+        <tr>
+            <th class="simple">
+                ID
+            </th>
+            <th class="simple">
+                Name
+            </th>
+            <th class="simple">
+                Department
+            </th>
+            <th class="simple">
+                Grade
+            </th>
+            <th class="simple">
+                Gender
+            </th>
+        </tr>
+    </thead>
+    <tbody id="table-content">
+    </tbody>    
+</table>
+<button id="btnGetEmployees">Get Employees</button>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            //var table = $("#tbl tbody");
+            $("#btnGetEmployees").click(function () {
+                //$(".simple").css("border", "1px solid red");
+
+                $.ajax({
+                    async: true
+                    , dataType: "json"
+                    , url: "/Home/GetEmployees"
+                    , method: "GET"
+                    , success: function (data) {                        
+                        $.each(data.employees, function (elem) {
+                            $("#table-content").append('<tr>' +
+                                '<td class="simple">' + elem.id + '</td>' +
+                                '<td class="simple">' + elem.name + '</td>' +
+                                '<td class="simple">' + elem.department + '</td>' +
+                                '<td class="simple">' + elem.grade + '</td>' +
+                                '<td class="simple">' + elem.gender + '</td>' +
+                                '</tr>');
+                            console.log(idx);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}

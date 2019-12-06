@@ -32,6 +32,12 @@ namespace AjaxSolution.Controllers
         {
             return View();
         }
+
+        public IActionResult Employee()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult GetCountries(string continent)
         {
@@ -47,6 +53,7 @@ namespace AjaxSolution.Controllers
             return Content(result);
             //return Json(new { data = "0" });
         }
+
 
         [HttpGet]
         public IActionResult GetEmployees()
