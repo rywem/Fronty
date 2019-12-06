@@ -23,6 +23,10 @@ namespace AjaxSolution.Controllers
             return View();
         }
 
+        public IActionResult BMI()
+        {
+            return View();
+        }
 
         public IActionResult PopulatePicklist()
         {
@@ -44,13 +48,20 @@ namespace AjaxSolution.Controllers
             //return Json(new { data = "0" });
         }
 
-        /*          
         [HttpGet]
-        public IActionResult GetAll()
-        {
-            return Json(new { data = _unitOfWork.Category.GetAll(includeProperties: "SiteImage") });
+        public IActionResult GetEmployees()
+        {           
+            return Json(Employees.GetEmployees());            
         }
-        */
+
+
+
+        [HttpGet]
+        public IActionResult GetBMI(float height, float weight)
+        {
+            return Json(Models.BMI.CalculateBMI(height, weight));
+        }
+
         public IActionResult Privacy()
         {
             return View();

@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewData["Title"] = "BMI";
+}
+    <style>
+        #box {
+            height: 350px;
+            width: 350px;
+            border: 2px solid black;
+            margin: 50px auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            margin: 0px auto;
+        }
+
+        #result {
+            color: purple;
+            font-size: 15px;
+            text-align: justify;
+            padding: 2px;
+        }
+    </style>
+<h1>BMI</h1>
+
+<div id="box">
+    <h2>BMI Calculator</h2>
+    <table>
+        <tr><td>Height:</td><td><input type="text" id="height" /></td><td>(height in centimeters)</td></tr>
+        <tr><td>Weight:</td><td><input type="text" id="weight" /></td><td>(weight in kilograms)</td></tr>
+    </table><br />
+    <center><button id="btnCalculate">Calculate BMI (XmlHTTP)</button></center>
+    <div id="result"></div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+
+            $("#btnCalculate").click(function () {
+                var _height = $("#height").val();
+                var _weight = $("#weight").val();
+
+                if (_height % 1 >= 0 && _weight % 1 >= 0) {
+                    $.ajax({
+                        url: "/Home/GetBMI",
+                        data: { height: _height, weight: _weight },
+                        dataType: "json",
+                        success: function (data, status, jqXHR) {
+                            $("#result").html("Your BMI is " + data.bmi + ". " + data.message);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}
