@@ -36,10 +36,12 @@
 
 @section Scripts {
     <script>
-        $(document).ready(function () {
-            //var table = $("#tbl tbody");
+        $(document).ready(function () {            
             $("#btnGetEmployees").click(function () {
-                //$(".simple").css("border", "1px solid red");
+                var rowCount = $('#table-content tr').length;
+                if (rowCount > 1) {
+                    $("#table-content tr").remove();
+                }
 
                 $.ajax({
                     async: true
@@ -47,7 +49,7 @@
                     , url: "/Home/GetEmployees"
                     , method: "GET"
                     , success: function (data) {                        
-                        $.each(data.employees, function (elem) {
+                        $.each(data.employees, function (idx, elem) {
                             $("#table-content").append('<tr>' +
                                 '<td class="simple">' + elem.id + '</td>' +
                                 '<td class="simple">' + elem.name + '</td>' +
