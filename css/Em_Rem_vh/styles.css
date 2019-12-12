@@ -1,0 +1,14 @@
+/*
+.box {
+    font-size: 16px;
+}
+p {
+   font-size: 1em; 
+    border: .5em black solid;
+    padding: 1em;
+}*/
+
+.box {
+    background-color: aqua;
+    height: 20vh;
+}
