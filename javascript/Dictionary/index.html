@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    Hello world.
+    <h1> hello </h1>    
+    <input type="text" id="textToAdd" /><br />
+    <button id="btnClick">Click me!!</button>
+    <br />
+    <span id="result">null</span>
+    <script>    
+        
+        var dict = {};
+        dict[0] = "First";
+        dict[1] = "Second";
+        var dictCounter = 2;
+        var text = "";
+        var i = 0;
+        
+        $(document).ready(function(){
+            $("#btnClick").click(function(){                
+                var val = $("#result");
+                dict[dictCounter] = $("#textToAdd").val();
+                
+                console.log(JSON.stringify(dict));
+                text = "";
+                for(i = 0; i <= dictCounter; i++)
+                {
+                    text += dict[i] + ", ";
+                }
+                
+                val.text(text);
+                
+                dictCounter++;
+            });
+        });
+    </script>
+</body>
+
+    
+
+</html>
