@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function Rectangle(a, b) {
+                return {
+                    length: a,
+                    width: b,
+                    perimeter: 2 *(a + b),
+                    area: a * b
+                };
+            }  
+            var rect = Rectangle(4, 3);
+            console.log(rect.perimeter);
+            
+            function getCount(objects) {
+                var sum = 0;
+                
+                for(var i = 0; i < objects.length; i++) {
+                    if ( objects[i].x == objects[i].y)
+                        sum++;
+                }
+                return sum;
+            }
+        </script>
+    </head>
+    
+    <body>
+    </body>
+</html>
