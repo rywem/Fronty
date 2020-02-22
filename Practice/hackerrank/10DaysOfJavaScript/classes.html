@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            class Polygon {
+                constructor(sidesArray){
+                    this.sides = sidesArray;
+                }
+                
+                perimeter() {
+                    let peri = 0;
+                    
+                    for(var i = 0; i < this.sides.length; i++) {
+                        peri += this.sides[i];
+                    }
+                    return peri;
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+    </body>
+</html>
