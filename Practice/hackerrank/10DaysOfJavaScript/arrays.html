@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function getSecondLargest(nums) {
+            var swapp;
+            var n = nums.length-1;
+            var x=nums;
+            do {
+                swapp = false;
+                for (var i=0; i < n; i++)
+                {
+                    if (x[i] < x[i+1])
+                    {
+                       var temp = x[i];
+                       x[i] = x[i+1];
+                       x[i+1] = temp;
+                       swapp = true;
+                    }
+                }
+                n--;
+            } while (swapp);
+            //var index = 1;
+            //var result = x[index];
+            var result = x[0];
+            for(var i = 0; i < x.length; i++) {
+                if ( result == x[i] ) {
+                    continue;
+                }
+                else {
+                    result = x[i];
+                    break;
+                }
+            }
+            return result;
+        }
+        console.log(getSecondLargest([12, 3, 123, 21, 31, 55, 90]));   
+        console.log(getSecondLargest([4, 3, 6, 6, 5]));   
+        </script>
+    </head>
+    
+    <body>
+    </body>
+</html>

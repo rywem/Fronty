@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script>
+        // Day 5: Inheritance
+        class Rectangle {
+            constructor(w, h){ 
+                this.w = w;
+                this.h = h;
+            }
+        }
+        
+        Rectangle.prototype.area = function() {
+            return this.w * this.h;
+        };
+        
+        const rect = new Rectangle(3, 4);
+        console.log(rect.area());
+        
+        class Square extends Rectangle {
+           constructor(s) {
+               super(s);
+               this.h = s;
+               this.w = s;
+           } 
+        };
+        // End Day 5.
+        
+        // https://www.youtube.com/watch?v=riDVvXZ_Kb4
+        /*const food = {
+            init: function (type) {
+                this.type = type
+            },
+            eat: function() {
+                console.log("you ate the " + this.type)
+            }
+        }
+        
+        //food.init("Cheese");
+        food.eat = function() {
+            console.log('YOU TOTALLY ATE THE ' + this.type.toUpperCase())
+        }
+        
+        const waffle = Object.create(food);
+        waffle.init('waffle');
+        waffle.eat();
+        
+        const carrot = Object.create(food);
+        carrot.init('carrot');
+        carrot.eat();
+        */
+    </script>
+</head>
+<body>
+</body>
+</html>

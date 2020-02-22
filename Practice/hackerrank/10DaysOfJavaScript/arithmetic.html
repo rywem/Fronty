@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        
+        function getArea(length, width){
+            return length * width;
+        }
+        function getPerimeter(length, width) {
+            return 2 * (length + width);
+        }
+        
+        function factorial(n){
+            var total = n;
+            for(var i = n; i>0; i--) {
+                if ( total == i )
+                    continue;
+                total = total*i;
+            }
+            return total;
+        }
+            
+        console.log(factorial(4));
+        </script>
+    </head>
+    
+    <body>
+    </body>
+</html>

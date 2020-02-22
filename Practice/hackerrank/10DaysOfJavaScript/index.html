@@ -4,6 +4,17 @@
     <meta charset="utf-8"/>
     <script>
         'use strict';
+        const PI = Math.PI;
+        
+        function area(r){
+            return PI*(r*r);
+        }
+        function circumference(r) {
+            return 2 * PI * r;
+        }
+        
+        console.log(area(2.6));
+        
         function greeting (parameterVariable) {
             console.log('Hello, world');
             console.log(parameterVariable);
@@ -86,12 +97,13 @@
              console.log(re.test(str4));
             return re;
         }
-        regexVar2();
+        //regexVar2();
         //reverseString("1234");
         //regexVar();
          //vowelsAndConsonants('javascriptloops');
         //greeting('Welcome to 10 Days of JavaScript!');
         //performOperation(12, 4.32, 'is the best place to learn and practice coding!');
+        
     </script>
 </head>
 <body>
