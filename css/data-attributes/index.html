@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <!-- https://css-tricks.com/a-complete-guide-to-data-attributes/ -->
+ 
+    </head>
+    <body>
+        <div data-foo></div>
+        <div data-size="large">Large</div>
+        <div data-size="Small">Small</div>
+        <li data-prefix="Careful with HTML in here"></li>
+        <div data-some-long-attribute-name></div>
+        <br />
+        <div data-columns="2">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div data-columns="3">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div data-columns="4">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        
+        <span data-info="123" data-index="2"  data-prefix="Dr. " data-emoji-icon="🏌️‍♀️" ></span>
+        
+        <!-- You have access to inline datasets as well: -->
+        <img src="spaceship.png" data-ship-id="324" data-shields="72%" onclick="pewpew(this.dataset.shipId)"> </img>
+    
+    <ul>
+      <li data-person='
+        {
+          "name": "Chris Coyier",
+          "job": "Web Person"
+        }
+      '></li>
+    </ul>
+    </body>
+    
+    <script>
+        let value = el.getAttribute("data-state");
+
+        // You can set the value as well.
+        // Returns data-state="collapsed"
+        el.setAttribute("data-state", "collapsed")
+
+        /*
+        // Get
+        span.dataset.info; // 123
+        span.dataset.index; // 2
+
+        // Set
+        span.dataset.prefix = "Mr. ";
+        span.dataset.emojiIcon = "🎪";        
+        */
+        /*
+        Note the camelCase usage on the last line there. It automatically converts kebab-style attributes in HTML, like data-this-little-piggy, to camelCase style in JavaScript, like dataThisLittlePiggy.
+        */
+        
+        const el2 = document.querySelector("li");
+
+        let json = el2.dataset.person;
+        let data = JSON.parse(json);
+
+        console.log(data.name); // Chris Coyier
+        console.log(data.job); // Web Person
+        
+        
+    </script>
+</html>

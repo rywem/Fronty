@@ -1,0 +1,48 @@
+@import "compass/css3";
+
+.area-one {
+  width: 40%;
+  float: left;
+  height: 100%;
+  margin-right: 1em;
+  > h2 {
+    background: #900;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    color: white;
+    margin: 0;
+  }
+}
+.content {
+  padding: 15px;
+  height: calc(100% - 50px);
+  overflow: auto;
+  background: red;
+  p {
+    margin: 0 0 1em 0;
+  }
+}
+
+html, body {
+  height: 100%;
+  background: #ccc;
+  padding: 20px;
+}
+body {
+  padding: 20px;
+  background: white;  
+}
+* {
+  box-sizing: border-box;
+}
+
+.el {
+    font-size: calc(1vw + 2px);
+    width: calc(100% - 20px);
+    height: calc(100vh - 20px);
+    padding: calc(1vh + 5px);
+    margin: 10px calc(2vw + 5px);
+    border-radius: 15px calc(15px / 3) 4px 2px;
+    transition: transform calc(1s - 120ms);
+}
