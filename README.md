@@ -8,6 +8,8 @@ Front End web development repository
 4. [HTML_CSS](./HTML_CSS) - building a responsive website. fundamentals. [Udemy Course](https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/t/lecture/2533744?start=0) - For practicing front-end web development.
 5. [jQuery In Action](https://www.udemy.com/jquery-web-development-made-easy/learn/v4/overview) - For learning jQuery
 6. [AjaxInAction](https://www.udemy.com/course/ajax-projects-hands-on-ajax-applications/learn/lecture/7517164) - For learning Ajax.
+7. [css](./css) - A directory for learning CSS concepts.
+8. [JavaScript](./javascript) - A directory for working out javascript concepts.
 ## Typography
 1. Serif - Extra strokes and curves at the end of letters (bits)
 2. Sans Serif - Without extra strokes, curves at end of letters (no bits)
