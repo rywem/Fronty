@@ -22,12 +22,12 @@ Front End web development repository
 1. [Bootstrap Examples](https://www.w3schools.com/bootstrap/bootstrap_examples.asp)
 2. [Building Response Websites using HTML5, CSS, JS and Bootstrap](https://www.udemy.com/build-responsive-website-using-html5-css3-js-and-bootstrap/)
 3. Fonts
-    1. [https://www.google.com/fonts](Google Fonts)
-    2. [https://www.fontsquirrel.com/](FontSquirrel)
+    1. [Google Fonts](https://www.google.com/fonts)
+    2. [FontSquirrel](https://www.fontsquirrel.com/)
     3. [FontAwesome](https://fontawesome.com/v4.7.0/)
 4. Typography
-    1. [http://www.pearsonified.com/typography](Golden Ratio Typography Calculator)
-    2. [https://www.gridlover.net/try] - try different settings in css
+    1. [Golden Ratio Typography Calculator](http://www.pearsonified.com/typography)
+    2. [try different settings in css](https://www.gridlover.net/try)
 ## Recommended Readings
 1. *The UX Book - Process and guidelines for ensuring a quality user experience* - by Rex Hartson and Pardha Pyla
 2. *Smashing UX Design* - Jesmond Allen and James Chudhey
