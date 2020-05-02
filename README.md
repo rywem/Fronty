@@ -10,6 +10,7 @@ Front End web development repository
 6. [AjaxInAction](https://www.udemy.com/course/ajax-projects-hands-on-ajax-applications/learn/lecture/7517164) - For learning Ajax.
 7. [css](./css) - A directory for learning CSS concepts.
 8. [JavaScript](./javascript) - A directory for working out javascript concepts.
+9. [Practice](./Practice) - Misc. front end practice.
 ## Typography
 1. Serif - Extra strokes and curves at the end of letters (bits)
 2. Sans Serif - Without extra strokes, curves at end of letters (no bits)
@@ -28,7 +29,7 @@ Front End web development repository
     2. [FontSquirrel](https://www.fontsquirrel.com/)
     3. [FontAwesome](https://fontawesome.com/v4.7.0/)
 4. Typography
-    1. [Golden Ratio Typography Calculator](http://www.pearsonified.com/typography)
+    1. [Golden Ratio Typography Calculator](https://grtcalculator.com/)
     2. [try different settings in css](https://www.gridlover.net/try)
 ## Recommended Readings
 1. *The UX Book - Process and guidelines for ensuring a quality user experience* - by Rex Hartson and Pardha Pyla
