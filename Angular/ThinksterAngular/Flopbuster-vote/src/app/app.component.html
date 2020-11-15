@@ -2,8 +2,14 @@
 
 <div style="margin-bottom:2rem" >
   <p>Which movie has a lower IMDB rating?</p>
-  <p>{{ this.voteService.answerMessage }}</p>
-  <button class="btn btn-primary" (click)="this.voteService.Startover()" *ngIf="this.voteService.reset">Play Again</button>
+  <p [hidden]="!hasChosen">
+    <span [hidden]="!isCorrect">Correct!</span>
+    <span [hidden]="isCorrect">Incorrect!</span>
+  </p>
+  <button class="btn btn-primary" 
+    [hidden]="!hasChosen" 
+    (click)="onPlayAgainClicked()"
+    >Play Again</button>
   
 </div>
   
@@ -11,19 +17,14 @@
 
 <div style="display:flex; justify-content:space-around">
   
-  <div style="cursor:pointer;" >    
-    <img 
-    (load)="this.voteService.firstRandom()"
-    (click)="this.voteService.answer('first')"
-    [src]="this.voteService.flops[this.voteService.firstOption].imageUrl" style="width:8rem; height:auto" alt="">
-
-  </div>
+  <my-movie-selector 
+    [movie]="flops.first"
+    (select)="onFirstSelected()"
+    ></my-movie-selector>
+  <my-movie-selector 
+    [movie]="flops.second"
+    (select)="onSecondSelected()"
+    ></my-movie-selector>
   
-  <div style="cursor:pointer">
-    <img 
-    (load)="this.voteService.secondRandom()"
-    (click)="this.voteService.answer('second')"
-    [src]="this.voteService.flops[this.voteService.secondOption].imageUrl" style="width:8rem; height:auto" alt="">
-  </div>
 
 </div>
